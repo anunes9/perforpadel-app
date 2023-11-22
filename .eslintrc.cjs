@@ -1,9 +1,43 @@
 module.exports = {
-  extends: ['mantine'],
-  parserOptions: {
-    project: './tsconfig.json',
-  },
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-  },
-};
+    env: {
+        browser: true,
+        es2020: true,
+        jest: true,
+    },
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "prettier",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "mantine",
+    ],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        // project: "./tsconfig.json",
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: "latest",
+        sourceType: "module",
+    },
+    plugins: ["react", "@typescript-eslint"],
+    rules: {
+        "react/react-in-jsx-scope": "off",
+        // 'react-refresh/only-export-components': 'warn',
+        indent: ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        quotes: ["error", "double"],
+        semi: ["error", "never"],
+        "no-multi-spaces": "error",
+        "react/no-unescaped-entities": 0,
+        "react/display-name": [0, { ignoreTranspilerName: true }],
+        "react/jsx-uses-react": "off",
+        "react/jsx-uses-vars": 2,
+        "react/jsx-no-undef": [2, { allowGlobals: true }],
+        "object-curly-spacing": [2, "always"],
+        "react/prop-types": 0,
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+    },
+}
