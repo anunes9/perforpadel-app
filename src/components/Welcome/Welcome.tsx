@@ -10,6 +10,7 @@ export function Welcome() {
           Mantine
         </Text>
       </Title>
+      <Text className="bg-blue-700 dark:bg-red-500 font-bold">hello</Text>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
         Vite integration follow{' '}
